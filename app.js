@@ -1,9 +1,12 @@
-let sticky=document.querySelector(".main-nav");
-window.addEventListener("scroll",myFunction);
+var sticky=document.querySelector(".navbar");
+var navHeight=sticky.offsetHeight;
+
 function myFunction(){
-if (window.pageYOffset>sticky.offsetTop) {
-    sticky.classList.add("sticky-nav");
-} else {
-    sticky.classList.remove("sticky-nav");
+    if(window.scrollY>=654){
+        sticky.classList.add("sticky-nav");
+    }
+    else{
+        sticky.classList.remove("sticky-nav");
+    }
 }
-}
+window.addEventListener("scroll",myFunction);
